@@ -6,77 +6,213 @@
         
         <title>Zadanie-29</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        
+        <link rel="stylesheet" href="newhtml2-style.css">
                 
     </head>
     
-        <body>    
-            <p></p>   
-            
-            <button>Klik!</button>
-            
-            <h1>Produkt</h1>
-            <button>Wyświetl opis</button>
-            <p id="opis"></p>
-            
-            <script src="main.js"></script>
+    <body> 
         
-        </body>
+        <h1>Tytul strony</h1>
+        <p id="tekst"></p>
+        <button id="dodaj" onclick="addText()">Dodaj</button>
+        <button id="usun" onclick="removeText()">Usun</button>
+        
+        <form>
+            <input id="imie" type="text" value="Podaj imię">
+            <input id="nazwisko" type="text" value="Podaj nazwisko">
+            <input id="telefon" type="text" value="Podaj nr telefonu">    
+        </form>
+
+        <button onclick="getData()">Wyświetl dane</button>
+        <div id="container">
+            <p>Dane:</p>
+            <p id="name"></p>
+            <p id="surname"></p>
+            <p id="phone"></p>
+        </div>
+            
+        <script src="main1.js"></script>
+        
+        
+    </body>
         
 </html>
 
 
-//zadanie-29
-let liczbaPierwsza = 12;
-let liczbaDruga = -34;
-function suma(a,b)
-{   
-    return a+b;
-}
-let c = suma(liczbaPierwsza, liczbaDruga);
-console.log(c);
 
-//zadanie-30
-let par = document.querySelector('p');
-par.innerHTML = 'WItaj w świecie HTML'; 
-
-//zadanie-31
-let button = document.querySelector('button');
-button.setAttribute('onclick','showAlert()');
-function showAlert()
+/*zadanie 1-*/
+body
 {
-    alert('Klik działa!');
+    background-color: #e6eeff;    
 }
 
-//zadanie-32
-var num1 = 2;
-var num2 = 5;
-function whichBigger(a,b)
+h1, p
 {
-    if(a > b)
-        return a;
+    text-align: center;
+}
+
+p
+{
+    height: 40px;
+    font-size: 20px;
+}
+
+h1
+{
+    color: #009900;
+}
+
+button
+{
+    width: 100px;  
+    color: white;
+    font-size: 20px;
+    top: 100px;    
+    display: inline-block; 
+    cursor: pointer;
+}
+
+#dodaj
+{
+    background-color: green;     
+}
+
+#usun
+{
+    background-color: red;    
+}
+
+/*zadanie 2-*/
+body
+{
+    background-color: lightslategray;
+    color: white;
+}
+
+form
+{
+    width: 180px;    
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input
+{
+    margin-bottom: 10px;
+    font-size: 15px;    
+}
+
+button
+{
+    background-color: buttonface;
+    width: 200px;    
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;    
+}
+
+#container
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+}
+
+#name, #surname, #phone
+{
+    margin: 5px;
+    text-align: left;
+}
+
+div > p:first-child
+{
+    text-decoration: underline;
+    font-weight: bold;   
+    text-align: center;
+}
+
+
+//zadanie-35
+function checker(n)
+{
+    if(n>=100 && n<=200)
+        console.log('Liczba '+n+' znajduje się w przediale 100-200');
     else
-        return b;
-}
-console.log(whichBigger(num1,num2));
+        console.log('Liczba '+n+' nie znajduje się w przediale 100-200');
+}  
+checker(-150);  
 
-//zadanie-33
-let paragraph = document.getElementById('opis');
-let btn = document.querySelector('button');
-btn.setAttribute('onclick','fillTheParagraph(paragraph)');
-function fillTheParagraph(a)
+//zadanie-36
+function numberTrueFalse(a,b)
 {
-    a.innerHTML = 'A';
-}
-
-//zadanie-34
-let string1 = 'Uwielbiam JavaScript';
-let string2 = 'Jestem świetnym programistą';
-function whichLonger(a,b)
-{
-    if(a.lenght > b.lenght)
-        return a;
+    let c = a+b;
+    
+    if(a===20 || b===20 || c<=20)
+        return true;  
     else
-        return b;
+        return false;
 }
-console.log(whichLonger(string1, string2));
+let d = numberTrueFalse(21,21);
+console.log(d);
+
+//zadanie-37
+function addText()
+{
+    let add = document.querySelector('p');
+    add.innerHTML = 'Akademia';
+}
+function removeText()
+{
+    let remove = document.querySelector('p');
+    remove.innerHTML = '';
+}
+
+//zadanie-38
+function calculator(a,b)
+{
+    let c = a+b;
+    let d = a-b;
+    let e = a*b;
+    
+    if(c>0)
+        console.log('Wynik dodawania wynosi '+c);
+    else
+        console.log('Wynik jest ujemny');
+    
+    if(d>0)
+        console.log('Wynik odejmowania wynosi '+d);
+    else
+        console.log('Wynik jest ujemny');
+        
+    if(e>0)
+        console.log('Wynik mnożenia wynosi '+e); 
+    else
+        console.log('Wynik jest ujemny');
+}
+calculator(2,-4);
+
+//zadanie-39
+let tab = [2,0,-10,100,15];
+function showArray(array)
+{
+    console.log(array[0]);
+    return array[0];    
+}
+showArray(tab);
+
+//zadanie-40
+function getData()
+{
+    let nameValue = document.getElementById('imie').value;
+    let surnameValue = document.getElementById('nazwisko').value;
+    let phoneValue = document.getElementById('telefon').value;
+    
+    document.getElementById('name').innerHTML = nameValue;
+    document.getElementById('surname').innerHTML = surnameValue;
+    document.getElementById('phone').innerHTML = phoneValue;
+}
