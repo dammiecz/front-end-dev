@@ -8,211 +8,725 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         
+        <link rel="stylesheet" href="style.css">
+                
+    </head>
+    
+    <body> 
+        
+        <div></div>
+        
+    </body>
+        
+</html>
+
+div
+{
+    width: 400px;
+    height: 400px;
+    background-image: url(img/slide4.jpg);
+    background-size: 50%;
+    background-repeat: no-repeat;
+}
+
+//////////////////////////////////////////////////////////////////////
+
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        
+        <title>Zadanie-43</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        
         <link rel="stylesheet" href="newhtml2-style.css">
                 
     </head>
     
     <body> 
         
-        <h1>Tytul strony</h1>
-        <p id="tekst"></p>
-        <button id="dodaj" onclick="addText()">Dodaj</button>
-        <button id="usun" onclick="removeText()">Usun</button>
+        <div></div>
         
-        <form>
-            <input id="imie" type="text" value="Podaj imię">
-            <input id="nazwisko" type="text" value="Podaj nazwisko">
-            <input id="telefon" type="text" value="Podaj nr telefonu">    
-        </form>
+    </body>
+        
+</html>
 
-        <button onclick="getData()">Wyświetl dane</button>
-        <div id="container">
-            <p>Dane:</p>
-            <p id="name"></p>
-            <p id="surname"></p>
-            <p id="phone"></p>
-        </div>
-            
-        <script src="main1.js"></script>
+div
+{
+    width: 400px;
+    height: 400px;
+    background-color: lightblue;
+    border-left: solid 2px black;
+    border-radius: 50px;
+}
+
+///////////////////////////////////////////////////////////////////
+
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
         
+        <title>Zadanie-44</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        
+        <link rel="stylesheet" href="newhtml2-style.css">
+                
+    </head>
+    
+    <body> 
+        
+        <div><p>Prostokąt z ramką</p></div>
         
     </body>
         
 </html>
 
 
+div
+{
+    width: 300px;
+    height: 200px;
+    text-align: center;    
+    border-width: 5px;
+    border-style: solid;    
+    border-color: red blue green orange;      
+}
 
-/*zadanie 1-*/
+///////////////////////////////////////////////////////////////////////
+
+
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        
+        <title>Zadanie-45</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        
+        <link rel="stylesheet" href="newhtml2-style.css">
+                
+    </head>
+    
+    <body> 
+        
+       <div id="div1"><p>Element 1</p></div>
+       <div id="div2"><p>Element 2</p></div>
+        
+    </body>
+        
+</html>
+
+#div1
+{
+    width: 300px;
+    height: 300px;
+    text-align: center;  
+    border: solid 5px black;
+    border-radius: 150px;   
+}
+
+#div2
+{
+    width: 300px;
+    height: 300px;
+    text-align: center; 
+    border: solid 5px black;
+    border-bottom-left-radius: 150px; 
+}
+
+////////////////////////////////////////////////////////////////////////
+
+
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        
+        <title>Zadanie-45</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        
+        <link rel="stylesheet" href="newhtml2-style.css">
+                
+    </head>
+    
+    <body> 
+        
+        <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                Debitis, est, obcaecati, magni, quae adipisci aperiam rem itaque 
+                amet fuga cupiditate maiores eligendi beatae esse doloribus corrupti 
+                assumenda earum atque porro.
+            </p>
+        </div>
+       
+        
+    </body>
+        
+</html>
+
+div
+{
+    width: 200px;
+    border: dashed 5px red;
+    font-size: 20px;
+    word-break: normal;
+}
+
+///////////////////////////////////////////////////////////////////////////
+
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        
+        <title>Zadanie-46</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        
+        <link rel="stylesheet" href="newhtml2-style.css">
+                
+    </head>
+    
+    <body> 
+        
+        <form>
+            <input type="text" id="imie" value="podaj Imię">
+            <input type="text" id="nazwisko" value="podaj Nazwisko">
+            <input type="text" id="email" value="podaj E-mail">
+            <input type="text" id="telefon" value=" podaj Nr telefonu">
+            <p>Zgoda na przetwarzanie danych osobowych<input type="radio" id="zgoda"> </p>                       
+            <button>Wyślij formularz</button>            
+        </form>
+       
+        
+    </body>
+        
+</html>
+
 body
 {
-    background-color: #e6eeff;    
-}
-
-h1, p
-{
-    text-align: center;
-}
-
-p
-{
-    height: 40px;
-    font-size: 20px;
-}
-
-h1
-{
-    color: #009900;
-}
-
-button
-{
-    width: 100px;  
-    color: white;
-    font-size: 20px;
-    top: 100px;    
-    display: inline-block; 
-    cursor: pointer;
-}
-
-#dodaj
-{
-    background-color: green;     
-}
-
-#usun
-{
-    background-color: red;    
-}
-
-/*zadanie 2-*/
-body
-{
-    background-color: lightslategray;
-    color: white;
+    background-image: url(img/slide3.jpg);
 }
 
 form
 {
-    width: 180px;    
+    display: block;
+    border: solid 5px red;
+    width: 300px;
+    text-align: center; 
+    background-color: lightblue;
     margin-left: auto;
     margin-right: auto;
 }
 
-input
+#imie
 {
-    margin-bottom: 10px;
-    font-size: 15px;    
+    margin-top: 20px;
+    margin-bottom: 10px;    
+    background-color: lightgray;
+    font-size: 20px;
+    border-radius: 5px;
+    border: solid 3px black;
+    padding-left: 5px;
+}
+
+#nazwisko
+{    
+    margin-bottom: 10px;    
+    background-color: lightgray;
+    font-size: 20px;
+    border-radius: 5px;
+    border: solid 3px black;
+    padding-left: 5px;
+}
+
+#email
+{    
+    margin-bottom: 10px;    
+    background-color: lightgray;
+    font-size: 20px;
+    border-radius: 5px;
+    border: solid 3px black;
+    padding-left: 5px;
+}
+
+#telefon
+{    
+    margin-bottom: 10px;    
+    background-color: lightgray;
+    font-size: 20px;
+    border-radius: 5px;
+    border: solid 3px black;
+    padding-left: 5px;
 }
 
 button
 {
-    background-color: buttonface;
-    width: 200px;    
     font-size: 20px;
-    font-weight: bold;
-    cursor: pointer;
+    background-color: lightskyblue;
+    margin-bottom: 20px;
+}
+
+
+//////////////////////////////////////////////////////////////////////
+
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        
+        <title>Zadanie-47</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        
+        <link rel="stylesheet" href="newhtml2-style.css">
+                
+    </head>
+    
+    <body> 
+        
+        <header>
+            <h1>Front End Developer</h1>            
+        </header>
+        
+        <ul>
+            <li><a href="#omnie">O mnie</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+        
+        <section id="omnie">
+            <h2>O mnie</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, 
+                velit, quos officiis autem neque facere alias repellat nemo sed ipsa 
+                quasi voluptatum porro explicabo incidunt voluptatem mollitia illo. 
+                Provident, Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                Officiis, ipsam incidunt dolore dolores eius nisi accusantium ratione 
+                sequi dicta ipsum molestias sit natus. Accusamus, quam, ipsa illum nam 
+                dignissimos sint! Lorem ipsum dolor sit amet, consectetur adipisicing 
+                elit. Qui, soluta, eveniet, officia ex modi cumque dignissimos sequi 
+                odit magnam autem excepturi nulla explicabo nihil amet veniam esse iste 
+                atque consequuntur! </p>  
+        </section>
+        
+        <section id="portfolio">
+            <h2>Portfolio</h2>
+            <img src="img/slide2.jpg" alt="NO IMG FOUND!">
+            <img src="img/slide3.jpg" alt="NO IMG FOUND!">
+            <img src="img/slide4.jpg" alt="NO IMG FOUND!">            
+        </section>
+        
+        <section id="kontakt">
+            <h2>Kontakt ze mną</h2>            
+            <form>
+                <h4>Formularz kontaktowy</h4>
+                <input type="text" id="imie" value="podaj imię">
+                <input type="text" id="nazwisko" value="podaj nazwisko">
+                <input type="text" id="email" value="podaj e-mail">
+                <textarea id="wiadomosc" rows="5" cols="30">podaj treść wiadomości</textarea>  
+                <button>Wyślij</button>
+            </form>   
+        </section>
+        
+    </body>
+        
+</html>
+
+ul>li
+{
+    display: inline-block;
+}
+
+ul,h1,h2,section#omnie>p,section#kontakt>p
+{
+    text-align: center;    
+}
+
+a
+{
+    text-decoration: none;  
+    display: block;
+    width: 100px;
+    font-size: 20px;
+    background-color: lightsteelblue;
+    border-radius: 10px;
+    border: solid 3px black;
+}
+
+a:visited 
+{
+    text-decoration: none;    
+}
+
+#portfolio
+{
+    text-align: center;
+}
+
+img
+{
+    display: inline-block;
+    width: 200px;
+    margin: 20px;    
+}
+
+form
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border: dotted 3px #000;
+    border-radius: 10px;
+    width: 300px;
+}
+
+input
+{
+    display: inline-block;
+}
+
+textarea
+{
     display: block;
     margin-left: auto;
     margin-right: auto;    
 }
 
-#container
-{
-    margin-left: auto;
-    margin-right: auto;
-    width: 200px;
+#imie
+{    
+    margin-bottom: 10px;
 }
 
-#name, #surname, #phone
-{
-    margin: 5px;
-    text-align: left;
+#nazwisko
+{    
+    margin-bottom: 10px;
 }
 
-div > p:first-child
+#email
+{    
+    margin-bottom: 10px;
+}
+
+#wiadomosc
 {
-    text-decoration: underline;
-    font-weight: bold;   
+    margin-bottom: 20px;
+}
+
+button
+{
+    font-size: 20px;
     text-align: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+button:hover
+{
+    color: green;
 }
 
 
-//zadanie-35
-function checker(n)
-{
-    if(n>=100 && n<=200)
-        console.log('Liczba '+n+' znajduje się w przediale 100-200');
-    else
-        console.log('Liczba '+n+' nie znajduje się w przediale 100-200');
-}  
-checker(-150);  
+/////////////////////////////////////////////////////////////////////////////
+<!DOCTYPE html>
 
-//zadanie-36
-function numberTrueFalse(a,b)
-{
-    let c = a+b;
+<html>
     
-    if(a===20 || b===20 || c<=20)
-        return true;  
-    else
-        return false;
-}
-let d = numberTrueFalse(21,21);
-console.log(d);
-
-//zadanie-37
-function addText()
-{
-    let add = document.querySelector('p');
-    add.innerHTML = 'Akademia';
-}
-function removeText()
-{
-    let remove = document.querySelector('p');
-    remove.innerHTML = '';
-}
-
-//zadanie-38
-function calculator(a,b)
-{
-    let c = a+b;
-    let d = a-b;
-    let e = a*b;
-    
-    if(c>0)
-        console.log('Wynik dodawania wynosi '+c);
-    else
-        console.log('Wynik jest ujemny');
-    
-    if(d>0)
-        console.log('Wynik odejmowania wynosi '+d);
-    else
-        console.log('Wynik jest ujemny');
+    <head>
         
-    if(e>0)
-        console.log('Wynik mnożenia wynosi '+e); 
-    else
-        console.log('Wynik jest ujemny');
-}
-calculator(2,-4);
-
-//zadanie-39
-let tab = [2,0,-10,100,15];
-function showArray(array)
-{
-    console.log(array[0]);
-    return array[0];    
-}
-showArray(tab);
-
-//zadanie-40
-function getData()
-{
-    let nameValue = document.getElementById('imie').value;
-    let surnameValue = document.getElementById('nazwisko').value;
-    let phoneValue = document.getElementById('telefon').value;
+        <title>Zadanie-47</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        
+        <link rel="stylesheet" href="newhtml2-style.css">
+        
+        <script>
+		function getNumber()
+		{
+    			var number = prompt('Podaj liczbę');
     
-    document.getElementById('name').innerHTML = nameValue;
-    document.getElementById('surname').innerHTML = surnameValue;
-    document.getElementById('phone').innerHTML = phoneValue;
+    			console.log(number);
+		}
+
+	</script>
+                
+    </head>
+    
+    <body> 
+        
+        <button onclick="getNumber()">Podaj liczbę</button>
+        
+    </body>
+        
+</html>
+
+
+/////////////////////////////////////////////////////////////////////////
+
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        
+        <title>Zadanie-48</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        
+        <link rel="stylesheet" href="newhtml2-style.css">
+        
+        <script>
+            function getNumber()
+            {
+                var number1 = prompt('Podaj liczbę nr1');
+                var number2 = prompt('Podaj liczbę nr2');
+
+                console.log('Liczba 1 to '+number1);
+                console.log('Liczba 2 to '+number2);
+            }            
+        </script>
+                
+    </head>
+    
+    <body> 
+        
+        <button onclick="getNumber()">Podaj liczby</button>
+        
+    </body>
+        
+</html>
+
+///////////////////////////////////////////////////////////////////////////////
+
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        
+        <title>Zadanie-49</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        
+        <link rel="stylesheet" href="newhtml2-style.css">   
+                
+    </head>
+    
+    <body> 
+        
+        <button onclick="getNumber()">Podaj liczby</button>
+        <button onclick="add(number1,number2)">Dodawanie</button>
+        <button onclick="subtrack(number1,number2)">Odejmowanie</button>
+        <button onclick="multiply(number1,number2)">Mnożenie</button>
+        
+        <div></div>   
+        
+        <script>
+            const div = document.querySelector('div');
+    
+            let number1;
+            let number2;
+            
+            function getNumber()
+            {
+                number1 = Number(prompt('Podaj liczbę nr1'));
+                number2 = Number(prompt('Podaj liczbę nr2'));
+                div.innerHTML = 'Liczba 1:'+number1+'</br>Liczba 2:'+number2;
+            }
+            
+            function add(num1, num2)
+            {                    
+                div.innerHTML = num1 + num2;
+            }
+            
+            function subtrack(num1, num2)
+            {               
+                div.innerHTML = num1-num2;
+            }
+            
+            function multiply(num1, num2)
+            {                
+                div.innerHTML = num1*num2;
+            }
+            
+        </script>
+        
+    </body>
+        
+</html>
+
+
+div
+{
+    width: 150px;
+    height: 70px;
+    color: white;
+    background-color: black;
+    border: solid 5px blue;
 }
+
+
+/////////////////////////////////////////////////////////////////////////
+
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        
+        <title>Zadanie-50</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        
+        <link rel="stylesheet" href="newhtml2-style.css">   
+                
+    </head>
+    
+    <body> 
+        
+        <form>
+            <h4>Dane Formularza</h4>
+            <input type="text" id="name" value="">
+            <input type="text" id="surname" value="">
+            <input type="text" id="email" value=""> 
+            <button type="submit">Wyślij</button>
+        </form>
+        <button onclick="getFormData()">Wprowadź dane</button>
+        
+        <script> 
+            let name;
+            let surname;
+            let email; 
+            
+            function getFormData()
+            {
+                name = prompt('Podaj swoje imię');
+                surname = prompt('Podaj swoje nazwisko');
+                email = prompt('Podaj swój e-mail'); 
+            
+                let nameForm = document.getElementById('name');
+                let surnameForm = document.getElementById('surname');
+                let emailForm = document.getElementById('email'); 
+
+                if(name.length !== 0)            
+                    nameForm.setAttribute('value',name);
+                else
+                    nameForm.setAttribute('value','bląd');  
+
+                if(surname.length !== 0)
+                    surnameForm.setAttribute('value',surname);
+                else
+                    surnameForm.setAttribute('value','bląd'); 
+
+                if(email.length !== 0)
+                    emailForm.setAttribute('value',email);
+                else
+                    emailForm.setAttribute('value','bląd'); 
+            }
+
+        </script>
+        
+    </body>
+        
+</html>
+
+/////////////////////////////////////////////////////////////////////////////////////
+
+
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        
+        <title>Zadanie-51</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        
+        <link rel="stylesheet" href="newhtml2-style.css">   
+                
+    </head>
+    
+    <body> 
+        
+        <form>
+            <h4>Dane Formularza</h4>           
+            <input type="text" id="email" value="Podaj e-mail">  
+            <button onclick="checkData()">Potwierdź</button>
+        </form>
+        
+        
+        <script> 
+            
+            function checkData()
+            {               
+                let emailForm = document.getElementById('email').value; 
+
+                if(emailForm.length === 0)               
+                    alert('Wpisz adres e-mail');
+            }
+
+        </script>
+        
+    </body>
+        
+</html>
+
+
+/////////////////////////////////////////////////////////////////////////////
+
+
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        
+        <title>Zadanie-51</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        
+        <link rel="stylesheet" href="newhtml2-style.css">   
+                
+    </head>
+    
+    <body>     
+        
+        <script>            
+           
+            let table = [-2, 20, 10];
+
+            function array(tab)
+            {
+                console.log(tab);
+                for(i=0; i<3; i++)
+                {
+                    if(tab[i]>10)
+                        tab[i] = 5;
+                }
+                
+                return tab;
+            }
+            
+            let v = array(table);
+            
+            console.log(v);
+
+        </script>
+        
+    </body>
+        
+</html>
+
+
