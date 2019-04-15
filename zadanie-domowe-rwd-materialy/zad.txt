@@ -1,0 +1,49 @@
+Twoim zadaniem bêdzie wykonanie nag³ówka do strony internetowej dla trzech rozdzielczoœci:
+- Wiêcej ni¿ 1170px
+- Pomiêdzy 992px - 1170px
+- Mniej ni¿ 992px
+
+W folderze "podgl¹d" znajduj¹ siê grafiki na których nale¿y siê wzorowaæ.
+
+Wytyczne dla rozdzielczoœci:
+- powy¿ej 1170px - tekst nag³ówkowy wyrównany horyzontalnie do lewej i wertykalnie do œrodka - obrazek na pe³n¹ wysokoœæ okna przegl¹darki
+- pomiêdzy 992px a 1170px - tekst nag³ówkowy wyrównany do prawego górnego rogu - obrazek na 70 procent wysokoœæ okna przegl¹darki
+- poni¿ej 992px - tekst pod obrazkiem - obrazek na po³owê wysokoœæ okna przegl¹darki
+
+Jako czcionki bazowej u¿yj fontu Verdana.
+
+Zadanie zrób za pomoc¹ "GitHub Pages"
+
+PodpowiedŸ przed wys³aniem zadania do sprawdzenia:
+- upewnij siê, ¿e w ¿adnym zakresie rozdzielczoœci nie pojawia siê poziomy scroll (pasek przewijania). W wersji responsywnej nie mo¿e byæ poziomego Scroll'a :)
+
+
+
+
+
+Zadaniem jest stworzenie animacji odliczaj¹cej od 10 do 1.
+
+Ka¿da liczba wyœwietla siê dok³adnie przez sekundê, nastêpnie znika i pojawia siê kolejna.
+
+Ca³a animacja koñczy siê napisem "I love CSS :)"
+
+Do³¹czony obrazek pokazuj¹cy przyk³adow¹ animacjê.
+
+Zadanie zrób w serwisie https://repl.it
+
+
+
+
+Wykorzystuj¹c w³aœciwoœci jêzyka CSS3 oraz odpowiednie regu³y @media stwórz uk³ad elementów zgodny z za³¹czonymi grafikami dla rozdzielczoœci:
+
+- powy¿ej 992px
+- miêdzy 768px a 992px
+- poni¿ej 768px
+
+PODPOWIED:
+
+Zadanie najlepiej wykonaæ wykorzystuj¹c w³aœciwoœci jakie daje flex-box
+Artyku³y, które opisuj¹ dzia³anie flex-boxa:
+
+- https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+- https://www.w3.org/TR/css-flexbox-1/
