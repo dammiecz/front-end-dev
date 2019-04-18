@@ -1,0 +1,79 @@
+Wykorzystuj¹c wiedzê o pozycjach w CSS (nie u¿ywaj¹c Flexbox) zakoduj analogiczny uk³ad elementów jak na za³¹czonej grafice. Kod CSS nie mo¿e byæ d³u¿szy ni¿ 40 linii uwzglêdniaj¹c odstêp jednej linii przed i za ka¿d¹ regu³¹ oraz pozosta³e zasady formatowania CSS.
+
+Swoj¹ pracê opublikuj na https://repl.it/ i wyœlij nam link do podgl¹du.
+
+PodpowiedŸ przed wys³aniem zadania do sprawdzenia:
+- do uzyskania efektu ko³a u¿yj w³aœciwoœci border i border-radius
+- staraj siê, aby powtarzaj¹ce siê w³aœciwoœci CSS zosta³y pogrupowane w klasach
+
+Pliki
+6-kola-i-prostokaty.png (4,87 KB)
+
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+
+Wykorzystuj¹c dotychczas zdobyt¹ wiedzê o HTML5 i CSS3 stwórz nastêpuj¹cy efekt:
+
+- Po najechaniu myszk¹ na obrazek pojawia ramka, która animuje siê od góry do po³owy i od do³u do po³owy tak, aby na koñcu obramowanie by³o na ca³ym obrazku. 
+- Miêdzy ramk¹ a obrazkiem ma byæ 5px odstêpu. 
+- Na œrodku obrazka wyœwietlaj jego opis. Ma on siê stopniowo pojawiaæ po najechaniu na obrazek myszk¹.
+
+PodpowiedŸ:
+Do stworzenia ramki musisz u¿yæ pseudoelementów ::before i ::after - pamiêtaj musz¹ one zawieraæ w³aœciwoœæ 'content' oraz musisz je pozycjonowaæ absolutnie wzglêdem kontenera z obrazkiem
+
+Podgl¹d efektu na za³¹czonych obrazkach
+- 7-image-hover-border-1-before.png
+- 7-image-hover-border-2-during.png
+- 7-image-hover-border-3-after.png
+
+Do realizacji projektu u¿yj za³¹czonego obrazka:
+- 7-jezioro.jpg
+
+Zadanie zrób za pomoc¹ GitHub Pages
+
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+
+Wykorzystuj¹c dotychczasow¹ wiedzê z zakresu CSS stwórz galeriê produktów analogiczn¹ do za³¹czonej grafiki:
+- 8-products-list-preview.png
+
+Specyfikacja: 
+- t³o strony to #98fb98
+- obrazki produktów ustaw jako t³o 
+- po najechaniu na obraz produktu pojawia siê maska w kolorze #ff6f00, na której znajduje siê link z ikon¹ koszyka (font awesome) 
+- po najechaniu na produkt maska ma pojawiaæ siê p³ynnie dziêki w³aœciwoœci transition 
+- projekt jest responsywny - w rozdzielczoœci poni¿ej 992px produkty maj¹ siê wyœwietlaæ w dwóch kolumnach, a poni¿ej 480px w jednej kolumnie 
+- do ustawienia koszyka u¿yj odpowiednich pozycji (relative, absolute)
+
+Zdjêcia produktów za³¹czone do projektu:
+- product-1.jpg
+- product-2.jpg
+- product-3.jpg
+- product-4.jpg
+
+Zadanie zrób za pomoc¹ GitHub Pages
+
+Pliki
+8-products-list-preview.png (1,88 MB)
+product-1.jpg (76,3 KB)
+product-2.jpg (139 KB)
+product-3.jpg (160 KB)
+product-4.jpg (193 KB)
+
+
+cccccccccccccccccccccccccccccccccccccccccccccc
+
+Z pomoc¹ CSS utwórz animacjê jak na za³¹czonej grafice.
+
+Zadanie zrób za pomoc¹ serwisu https://repl.it
+
+Pliki
+9-animacja-napis.gif (302 KB)
+
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+
+Pamiêtaj o wyzerowaniu marginu dla body - pojawia siê bia³a ramka.
+
+Obrazki powinny zajmowaæ 100% szerokoœci okna i odpowiednie wysokoœci (100%, 70%, 50%) - aby osi¹gn¹æ taki efekt najlepiej jest u¿yæ w³aœciwoœci 
+
+background-size: cover;
+po to aby obrazek dobrze siê skalowa³. Natomiast wysokoœæ ustaw sobie przy u¿yciu height - warto u¿yæ jednostki vh tak jak to zrobi³eœ, ale trzeba zmieniæ wartoœci. Np dla najwiêkszych rozdzielczoœci bêdzie to 100vh.
+
