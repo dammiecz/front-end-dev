@@ -1,0 +1,76 @@
+Zaimplementuj funkcję, która przyjmuje 2 argumenty. Pierwszy parametr to string, a drugi to litera.
+
+Funkcja liczy i zwraca ilość wystąpień litery w stringu.
+
+Funkcję wywołaj z parametrami:
+1. Szkoła Programowania Akademia 108
+2. a
+
+Wynik działania funkcji wyświetl w konsoli.
+
+Zadanie domowe robimy z wykorzystaniem serwisu https://repl.it
+
+
+Zaimplementuj funkcję, która przyjmuje 2 parametry. Pierwszy parametr, to podstawa, która będzie podnoszona do potęgi, a drugi to wykładnik.
+
+Funkcja podnosi podstawę do potęgi i zwraca wartość swoich obliczeń.
+
+Przy implementacji zadania nie używaj klasy Math.
+
+Zadanie domowe robimy z wykorzystaniem serwisu https://repl.it
+
+
+Zaimplementuj funkcję, przyjmuje jeden parametr - liczbę.
+
+Funkcja sprawdza, czy liczba jest liczbą parzystą, czy nie.
+
+Funkcja zwraca wynik swoich działań - wartość typu Boolean.
+
+Zadanie domowe robimy z wykorzystaniem serwisu https://repl.it
+
+
+Klient chce mieć aplikację służącą do obliczania wypłat.
+
+System wyświetla listę (załączony plik index.html),w którym znajdując się dane: pracownik, liczba przepracowanych godzin oraz stawka PLN za godzinę.
+
+Twoim zadaniem jest stworzenie skryptu, który będzie:
+- Liczył wypłatę dla każdego pracownika i wpisywał je dla każdego pracownika do pola span.wyplata
+Klient chce także, aby od razu doliczana była premia - jeżeli pracownik pracował powyżej 160 godzin, za każdą dodatkową godzinę otrzymuje podwójną stawkę.
+- Zaznaczał czerwonym tłem osoby, które przepracowały mniej niż 100 godzin
+
+Dodatkowo klient życzy sobie aby wyświetlała się lista trzech najlepszych pracowników - czyli takich, którzy przepracowali najwięcej godzin.
+
+Zadanie zrób w Javascript wykorzystując model DOM.
+
+Stylowanie dowolne (mile widziane).
+
+Obliczanie jest odpalane przyciskiem button#oblicz
+
+Rozwiązanie podeślij przez Github Pages.
+
+Pliki
+index.html (6,14 KB)
+
+
+
+
+Szkoła potrzebuje programu służącego do obliczania wyników uczniów.
+
+System wyświetla listę (załączony plik index.html),w której znajdują się dane: uczeń, oceny z przedmiotów, zajęcia dodatkowe i średnia.
+
+Twoim zadaniem jest stworzenie skryptu, który będzie:
+- Liczył średnią dla każdego ucznia i wpisywał ją do pola span.srednia
+Szkoła chce aby do średniej wliczany był udział w zajęciach dodatkowych - jeżeli uczeń brał w nich udział, ocena z danego przedmiotu zostaje podwyższona o 0,5 stopnia (pod warunkiem, że ocena nie jest już maksymalna, czyli 6). 
+- Zaznaczał zielonym tłem osoby, których średnia wynosi przynajmniej 4,75.
+- Zaznaczał czerwonym tłem osoby, które mają przynajmniej jedną ocenę niedostateczną.
+
+Zadanie zrób w JavaScript wykorzystując model DOM.
+
+Stylowanie dowolne (mile widziane).
+
+Obliczanie jest odpalane przyciskiem button#oblicz
+
+Rozwiązanie podeślij przez Github Pages.
+
+Pliki
+index.html (13,9 KB)
