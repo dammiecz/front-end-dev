@@ -1,3 +1,79 @@
+Przyszedł do Ciebie klient, który ma projekt graficzny zamówiony u webdesignera i chce żeby go zakodować.
+
+Zaplanuj, dobierz rozwiązania technologiczne i zakoduj projekt, który jest w załączniku.
+
+Specyfikacja:
+
+Kolory:
+- Header - #87509c
+- tło elementów menu na :hover - #643a79 
+- pomarańczowy button w sekcji Header - #eb7d4b
+- tło sekcji "Team" - #e7f1f8
+- ciemnoszare kółka w sekcji "Team" - #696969 
+- tło sekcji "About us" - #d74680
+- pomarańczowe napisy w sekcji "About us" - #ffdd99
+- ciemnoszare kółka w sekcji "About us" - #787878 
+- linia pod nagłówkiem w sekcji "About us" - #b73c6d
+- kółka w sekcji "Skills" - #34b7eb, #dc4481, #17c5aa, #ec7d4f
+- tło sekcji z formularzem - #3c5499
+- linia pod nagłówkiem w sekcji z formularzem - #273a71
+- nagłówki na jasnym tle (sekcja "Team" i "About us"), podpisy w sekcji "Skills" - #3c4761
+- kolor jasnoszary (linia pod nagłówkami, tło ikon social media w sekcji "Team") - #c8d9e5
+- niebieski tekst w sekcji "Team", button w sekcji z formularzem, linki na hover w stopce - #55c2e9
+
+Czcionka użyta w projekcie: 
+- "Titillium Web"
+
+Podpowiedzi:
+- Aby użyć czcionki "Titillium Web" w swoim projekcie, dodaj do sekcji head poniższy link:
+<link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,700" rel="stylesheet">
+
+- Aby umieścić ikony social media, potrzebujesz dołączyć do strony bibliotekę Font Awesome. W tym celu dodaj w sekcji head poniższy link:
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+Ikony znajdziesz tutaj: https://fontawesome.com/icons?d=gallery
+
+Po wybraniu odpowiedniej ikonki, wystarczy skopiować element html i umieścić go w swoim projekcie.
+Tak będzie wyglądała ikonka "Twitter":
+<i class="fab fa-twitter"></i>
+Wielkość i kolor ikony możesz zmienić za pomocą właściwości font-size oraz color.
+
+- Do stworzenia linii pod nagłówkami możesz użyć znacznika <hr>
+
+Zadanie oddaj w formie linku do GitHub Pages.
+
+
+
+
+Twój klient chciałby, żeby na jego stronie menu nawigacyjne miało nietypowy kształt.
+
+Efekt jaki należy osiągnąć można znaleźć w załączonym pliku graficznym.
+
+Wykorzystując wiedzę na temat języka CSS3 zakoduj takie menu nawigacyjne.
+
+Szczególnie przydatna może być wiedza na temat pozycji oraz właściwości transition.
+
+Zwróć uwagę na położenie linków w menu. Połowa z nich jest ustawiona od lewej strony, a druga połowa od prawej.
+
+Zadanie dodaj za pomocą GutHub Pages.
+
+
+
+
+Napisz klasę "Ksiazka", która ma właściwości "tytul", "autor", "przeczytana" (przeczytana jest typu Boolean) oraz jedną metodę "opiszKsiazke", która zwraca stringa opisującego tą książkę wg. wzoru "Książka ma tytuł Wiedźmin, autorem jest Andrzej Sapkowski i została przeczytana.".
+
+Stwórz 3 instancje obiektu tej klasy z czego jedna z książek ma być już przeczytana, a następnie stwórz nową tablicę globalną i dodaj do niej te 3 książki.
+
+Następnie napisz funkcję "iloscPrzeczytanych", która jako parametr przyjmuje tablicę obiektów (naszych książek, ktore stworzyliśmy), a zwraca nam ilość książek, ktore zostały przeczytane. Podczas iteracji po tablicy (wewnątrz tej funkcji) i sprawdzania, czy książka jest przeczytana, wywołuj także na obiekcie metodę opiszKsiazke(), a wynik jej działania wyświetlaj w konsoli.
+
+Na samym końcu wyświetl w konsoli ilość przeczytanych książek
+
+Zadanie domowe robimy z wykorzystaniem serwisu https://repl.it
+
+
+
+
+
 Zaimplementuj funkcję, która przyjmuje 2 argumenty. Pierwszy parametr to string, a drugi to litera.
 
 Funkcja liczy i zwraca ilość wystąpień litery w stringu.
