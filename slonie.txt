@@ -1,0 +1,369 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class fastSlonie 
+{
+    static String [] I = new String[4];  //dane
+    static int n;                        //liczba sloni
+    static int [][] SE = new int[2][n];  //ustawienie sloni
+    static int [] M = new int[n];        //masy sloni
+    static int CP;                       //wynik
+
+    String[] stream() throws FileNotFoundException 
+    {        
+        
+        File file = new File("D:\\inp.txt");
+        Scanner inputFile = new Scanner(file);
+        
+        String [] input = new String[4];
+        
+        for(int j=0; j<4; j++)
+        {
+            input[j] = inputFile.nextLine();
+        }
+           
+        return input;
+    }
+    
+    int pobierzLiczbeSloni(String [] input) 
+    {
+        int N;
+        N = Integer.parseInt(input[0]);
+        
+        return N;
+    }
+    
+    int [][] pobierzUstawienieSloni(int N, String [] input)
+    {        
+        int i;
+
+        int [][] err = new int[1][1];
+        err[0][0] = 0;
+
+        String [] S = input[2].split("\\s");
+        String [] E = input[3].split("\\s");
+
+        if(S.length!=N)
+        { return err; }
+        
+        if(E.length!=N)
+        { return err; }
+        
+        int [][] output = new int[2][N];
+
+            for(i=0; i<N; i++)
+            {
+                output[0][i] = Integer.parseInt(S[i]);
+                output[1][i] = Integer.parseInt(E[i]);
+            }
+        return output;
+    }
+    
+    int [] pobierzMaseSloni (int N, String [] input)
+    {
+       int i;
+
+        int [] err = new int[1];
+        err[0] = 0;
+
+        String [] m = input[1].split("\\s");
+        
+        if(m.length!=N)
+        { return err; }
+        
+        int []output = new int[N];
+
+            for(i=0; i<N; i++)
+            {
+                output[i] = Integer.parseInt(m[i]);
+                
+            }
+        return output; 
+    }
+
+    int [][] cykle(int SE[][], int N)
+    {
+        int a, b, k, l;
+        int i = 0;
+        int j = 0;
+        int sum = N;
+        
+        do
+        {   
+            l = SE[0][i];
+            k = SE[1][i];
+            
+            if(l==k)
+            {                
+                sum = sum-1;
+                i++;                
+            }
+            else
+            {      
+                j++;
+                
+                while(SE[0][j]!=k)
+                {
+                    j++;
+                }
+                
+                a = SE[0][j];
+                b = SE[1][j];
+                
+                SE[0][j] = SE[0][i+1];
+                SE[1][j] = SE[1][i+1];
+                
+                SE[0][j] = a;
+                SE[1][j] = b;                
+                              
+                if(SE[1][i+1]==l)
+                { 
+                    i+=2;
+                    sum = sum-2;                    
+                }
+                else
+                {
+                    i++;                
+                    sum = sum-1;                    
+                }                
+            }
+        }        
+        while(sum!=0);
+        
+        return SE;
+    }
+
+    int wynik(int C[][], int M[], int n)
+    {
+        int sum = n;
+        int l = 0;
+        int i, j ,s, max, e, k, min;
+        int wiersz = 0;
+        int kolumna = 1;
+        int w = 0;
+
+        int MIN = Arrays.stream(M).min().getAsInt();
+
+        ///////////////////////////////////////////////////////////////////////
+        /////////////OBLICZANIE WYMIARU TABLICY CYKLI PROSTYCH/////////////////
+        ///////////////////////////////////////////////////////////////////////
+            max = 0;
+            k = -1;
+
+            do
+            {
+                do
+                {
+                    s = C[0][l];
+                    max = max + 1;
+                    sum = sum - 1;
+                    k++;
+                }
+                while(C[1][k]!=s);
+
+                wiersz = wiersz + 1;
+                l = k+1;
+
+                if(max > kolumna)
+                    { kolumna = max; }
+
+                max = 0;
+
+            }
+            while(sum!=0);
+
+        ///////////////////////////////////////////////////////////////////////
+        /////////////UZUPENIANIE TABLICY CYKLI PROSTYCH///////////////////////
+        ///////////////////////////////////////////////////////////////////////
+        int Cp[][] = new int [wiersz][kolumna+6];
+        sum = n;
+
+        loop:
+        for(i=0; i<wiersz; i++)
+        {
+            for(j=0; j<1; j++)
+            {
+                if(C[1][i]==C[0][i])
+                { Cp[i][j] = C[1][i]; sum = sum - 1; w++; }
+                else
+                { break loop; }
+            }
+        }
+
+        if(sum!=0)
+        {
+            j = i-1;
+            l = i;
+            k = i;
+
+            do
+            {
+                e = 0;
+
+                do
+                {
+                    s = C[0][k];
+                    Cp[w][e] = C[0][l];
+                    e++;
+                    j++;
+                    l++;
+                }
+                while(C[1][j]!=s);
+
+                k+=e;
+                w++;
+            }
+            while(w!=wiersz);
+        }
+
+        ///////////////////////////////////////////////////////////////////////
+        //////////PRZYPISANIE MAS SONI W MIEJSCE NUMERU SONIA////////////////
+        ///////////////////////////////////////////////////////////////////////
+       for(i=0; i<wiersz; i++)
+       {
+           Cp[i][kolumna+2] = 0;
+
+           for(j=0; j<kolumna; j++)
+           {
+               if(Cp[i][1]!=0 && Cp[i][j]>0)
+               {
+                   Cp[i][j]=M[Cp[i][j]-1];
+                   Cp[i][kolumna+2] = Cp[i][kolumna+2]+1;
+               }
+               else
+               { Cp[i][j]=0; break; }
+           }
+       }
+      /////////////////////////////////////////////////////////////////////////
+      //ZNAJDOWANIE MINIMALNEJ MASY, SUMY MAS ORAZ ILOCI SONI W CYKLU PROSTYM//
+      /////////////////////////////////////////////////////////////////////////
+        for(i=0; i<wiersz; i++)
+        {
+            Cp[i][kolumna] = 0;          // suma mas s?oini
+            Cp[i][kolumna+1] = 6500;     // masa minimalna
+            j=0;
+
+            while(j!=Cp[i][kolumna+2])
+            {
+                if(Cp[i][1]==0)
+                {
+                    Cp[i][kolumna] = 0;
+                    Cp[i][kolumna+1] = 0;
+                    break;
+                }
+                else
+                {
+                    Cp[i][kolumna] = Cp[i][kolumna] + Cp[i][j];
+
+                    if(Cp[i][j] < Cp[i][kolumna+1])
+                    {
+                        Cp[i][kolumna+1] = Cp[i][j];
+                    }
+                }
+                j++;
+            }
+        }
+        ///////////////////////////////////////////////////////////////////////
+        //////////////////////////OBLICZANIE WYNIKU////////////////////////////
+        ///////////////////////////////////////////////////////////////////////
+        for(i=0; i<wiersz; i++)
+        {
+            if(Cp[i][1]!=0)
+            {
+                Cp[i][kolumna+3] = Cp[i][kolumna]+(Cp[i][kolumna+2]-2)*Cp[i][kolumna+1];
+                Cp[i][kolumna+4] = Cp[i][kolumna]+Cp[i][kolumna+1]+(Cp[i][kolumna+2]+1)*MIN;
+
+                if(Cp[i][kolumna+3]<Cp[i][kolumna+4])
+                { Cp[i][kolumna+5] = Cp[i][kolumna+3]; }
+                else
+                { Cp[i][kolumna+5] = Cp[i][kolumna+4]; }
+            }
+            else
+            {
+                Cp[i][kolumna+3] = 0;
+                Cp[i][kolumna+4] = 0;
+                Cp[i][kolumna+5] = 0;
+            }
+        }
+
+        int wynik = 0;
+
+        for(i=0; i<wiersz; i++)
+        {
+            wynik = wynik + Cp[i][kolumna+5];
+        }
+
+        return wynik;
+    }
+
+    public static void main(String args[]) throws FileNotFoundException 
+    {
+        fastSlonie S = new fastSlonie();
+
+        I = S.stream();
+        
+        n = S.pobierzLiczbeSloni(I);
+        
+        SE = S.pobierzUstawienieSloni(n,I);
+                        
+        System.out.println(n);
+        for(int i=0; i<2; i++)
+        {
+            for(int j=0; j<n; j++)
+            {
+                System.out.print(SE[i][j]+" ");                
+            }
+            System.out.println();
+        }
+        
+        M = S.pobierzMaseSloni(n,I);
+        
+        for(int i=0; i<n; i++)
+        {
+            System.out.print(M[i]+" ");                
+        }
+                
+        SE = S.cykle(SE,n);
+        
+        System.out.println("Znalezione cykle");
+        for(int i=0; i<2; i++)
+        {
+            for(int j=0; j<n; j++)
+            {
+                System.out.print(SE[i][j]+" ");                
+            }
+            System.out.println();
+        }
+        
+        if(n<2 || n>1000000)
+            {System.exit(0);}
+
+        if(SE.length!=n)
+            {System.exit(0);}       
+
+        for(int i=0; i<2; i++)
+        {
+            for(int j=0; j<n; j++)
+            {
+                if(SE[i][j]>n || SE[i][j]<1)
+                {System.exit(0);}
+            }
+        }   
+        
+        for(int i=0; i<n; i++)
+        {
+            if(M[i]<100 || M[i]>6500 || M.length!=n)
+                {System.exit(0);}
+        }        
+        
+        CP = S.wynik(SE,M,n);
+        System.out.println(CP);
+    }
+    
+    
+    
+    
+    
+}
