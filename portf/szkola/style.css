@@ -1,0 +1,696 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font-size: 26px;
+    font-family: sans-serif;
+}
+
+h2
+{
+    text-align: center;
+    padding: 8vh 3vh 8vh 3vh;
+}
+
+/*----------------------------styl naglowka-----------------------------------*/
+header
+{   
+    width: 100%;
+    background-image: url("img/bckg_02.jpg");    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;;
+    color: #fff;
+    text-align: center;    
+}
+
+header::after
+{
+    content:"";
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(rgba(0,0,0,0),rgba(255,255,255,1));    
+}
+
+header h1
+{
+    padding-top: 40vh; 
+    font-size: 80px;    
+}
+
+header h2
+{
+    padding: 0vh 3vh 0vh 3vh;
+    font-size: 50px;
+}
+
+header h4
+{
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+    font-size: 30px;
+}
+
+header img
+{   
+    width: 100px;     
+    animation: logo-animation 5s infinite linear;    
+}
+
+@keyframes logo-animation
+{
+    from {transform: rotateY(0deg);}
+    to {transform: rotateY(-360deg);}
+}
+
+/*----------------------------styl menu---------------------------------------*/
+header nav
+{
+    position:absolute;
+    right: 0;
+    top: 0;
+    padding: 1vw;
+    margin: 0;
+}
+
+header nav ul
+{   
+    text-align: right;
+    margin: 0;
+}
+
+header nav ul li
+{
+    display: inline-block;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0 2vw 0 2vw;
+    font-size: 20px;
+}
+
+/*----------------------------styl sekcji o mnie----------------------------*/
+section#o-mnie
+{
+    width: 100%;
+    height: fit-content;
+    background-image: linear-gradient(rgba(255,255,255,0),rgba(171,205,204,0.6));    
+    display: flex;
+    align-items: center;
+    padding-top: 10vh;
+}
+
+section#o-mnie div#pole
+{
+    width: 50%;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;    
+    align-items: center; 
+    padding: 5vh;
+    flex-basis: 50%;
+}
+
+section#o-mnie div#niebieski
+{
+    display: flex;
+    justify-content: center;
+    flex-basis: 100%;  
+    padding: 5px;
+}
+
+section#o-mnie div#zielony, div#czerwony, div#fioletowy, div#zolty
+{
+    display: flex;
+    flex-basis: 50%;    
+    padding: 5px;
+}
+
+section#o-mnie div#zielony
+{
+    justify-content: center;
+}
+
+section#o-mnie div#czerwony
+{
+    justify-content: flex-start;
+}
+
+section#o-mnie div#fioletowy
+{
+    justify-content: center;
+}
+
+section#o-mnie div#zolty
+{
+     justify-content: flex-end;
+}
+
+section#o-mnie div div.ball
+{
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;  
+    box-shadow: 0px 10px 5px #888888;
+    transform: rotate(-135deg);
+}
+
+section#o-mnie div#niebieski div
+{
+    background-image: linear-gradient(#80bfff,#fff);  
+    order: 1;   
+    
+}
+
+section#o-mnie div#zielony div
+{
+    background-image: linear-gradient(#80ff80,#fff);   
+    order: 2;    
+}
+
+section#o-mnie div#fioletowy div
+{
+    background-image: linear-gradient(#d580ff,#fff);   
+    order: 2;    
+}
+
+section#o-mnie div#zolty div
+{
+    background-image: linear-gradient(#ffff80,#fff);   
+    order: 3;    
+}
+
+section#o-mnie div#czerwony div
+{
+    background-image: linear-gradient(#ff8080,#fff); 
+    order: 3;    
+}
+
+section#o-mnie div#id-info
+{
+    width: 50%;
+    height: fit-content;
+    text-align: center;
+    flex-basis: 50%;
+    order: 1;    
+    padding: 5vh;
+}
+
+section#o-mnie div#id-info div#zdjecie
+{
+    width: 30vw;
+    height: 30vw;
+    background-image: linear-gradient(grey,green);
+    border-radius: 15vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section#o-mnie div#id-info p:nth-child(3)
+{
+    font-size: 30px;
+    margin-top: 1.5vw;    
+}
+
+section#o-mnie div#id-info p:nth-child(2)
+{
+    font-size: 45px;
+    font-weight: bold;
+    margin-top: 3vw;
+}
+
+section#o-mnie div#id-info p:nth-child(4)
+{
+    text-align: justify;
+    padding: 1.5vw;
+}
+
+section#o-mnie div#id-info p:nth-child(4)::before
+{
+    content:".  ";
+    opacity: 0;
+}
+
+@media all and (max-width: 992px)
+{
+    section#o-mnie div#pole
+    {
+        width: 50%;    
+        display: block;
+        height: fit-content;
+    }
+    
+    section#o-mnie div#niebieski, div#zielony, div#czerwony, div#fioletowy, div#zolty
+    {
+        display: block;
+    }
+}
+
+/*----------------------------styl sekcji o kursie----------------------------*/
+section#o-kursie
+{
+    width: 100%;
+    height:fit-content;    
+    background-color: rgba(171,205,204,0.6); 
+}
+
+section#o-kursie h2
+{
+    color: rgb(0,36,96);
+}
+
+section#o-kursie h6
+{
+    font-size: 20px;
+}
+
+section#o-kursie p#p-kurs
+{
+    padding-left: 2vw;
+    padding-right: 2vw;
+    text-align: justify;
+    margin-bottom: 7vh;
+}
+
+section#o-kursie p#p-kurs::before
+{
+    content:'.   ';
+    opacity: 0;
+}
+
+section#o-kursie div
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section#o-kursie div#dla-kogo img
+{
+    width: 130px;    
+}
+
+section#o-kursie div#po-kursie img
+{
+    width: 170px;    
+}
+
+section#o-kursie div#technologie img
+{
+    width: 200px;    
+}
+
+section#o-kursie div#cena img
+{
+    width: 150px;    
+}
+
+section#o-kursie div#czas img
+{
+    width: 150px;    
+}
+
+section#o-kursie div#praca img
+{
+    width: 170px;    
+}
+
+section#o-kursie div p
+{
+    font-weight: bold;  
+    text-align: center;
+}
+
+section#o-kursie div.circle
+{    
+    background-color: rgba(91,155,213,0.5);    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+section#o-kursie div.d
+{
+    order: 1;
+}
+
+section#o-kursie div.sr
+{
+    order: 3;
+}
+
+section#o-kursie div.m
+{
+    order: 2;
+}
+
+section#o-kursie div#technologie, div#cena, div#czas
+{
+    width: 300px;
+    height: 300px;
+    border-radius: 150px;     
+}    
+
+section#o-kursie div#praca
+{
+    width: 360px;
+    height: 360px;
+    border-radius: 180px;    
+}
+
+section#o-kursie div#dla-kogo, div#po-kursie
+{
+    width: 440px;
+    height: 440px;
+    border-radius: 220px;    
+}
+
+section#o-kursie ul
+{
+    text-align: center;
+}
+
+section#o-kursie ul li span
+{
+    content: "HTML";
+    font-weight: bold;
+}
+
+section#o-kursie ul li img
+{
+    width: 30px;
+}
+    
+@media all and (min-width: 992px)
+{
+    section#o-kursie div
+    {
+        flex-direction: row;
+        flex-wrap: wrap;        
+    }
+    
+    section#o-kursie div.d
+    {
+        flex-basis: 40%;
+    }
+    
+    section#o-kursie div.sr
+    {
+        flex-basis: 90%;
+    }
+    
+    section#o-kursie div.m
+    {
+        flex-basis: 30%;
+    }
+}
+
+@media all and (min-width: 1315px)
+{      
+    section#o-kursie div.sr
+    {
+        flex-basis: 30%;
+        order: 5;
+    } 
+    
+    section#o-kursie div.d
+    {
+        flex-basis: 30%;
+    }
+    
+    section#o-kursie div.d:nth-of-type(2)
+    {
+        order: 4;        
+    }   
+    
+    section#o-kursie div.m:nth-of-type(5)
+    {
+        order: 6; 
+    }
+    
+     section#o-kursie div.m:nth-of-type(4)
+    {
+        order: 4;
+    }
+    
+     section#o-kursie div.m:nth-of-type(3)
+    {
+        order: 2; 
+    }
+    
+    section#o-kursie div.d
+    {
+        flex-basis: 30%;
+    }
+}
+
+/*--------------------------styl portfolio------------------------------------*/
+
+section#portfolio
+{   
+    padding: 0;
+    background-color: rgba(171,205,204,0.6);
+    height: min-content;
+    width: 100%;    
+}
+
+section#portfolio h2
+{
+    color: rgb(0,36,96);
+}
+
+section#portfolio div.album
+{      
+    font-size: 0px;    
+}
+
+section#portfolio div.album div.portfolio-item
+{   
+    width: 100%; 
+    height: 400px;
+    font-size: 0px;
+    display: block;
+    position: relative;   
+}
+
+section#portfolio div.portfolio-item img
+{    
+    width: 100%; 
+    height: 100%;   
+    display: block;
+    font-size: 0;
+}
+
+section#portfolio div.album div.portfolio-item::after
+{   
+    content:'';
+    width: 100%;
+    height: 100%;    
+    position: absolute; 
+    display: block;
+    top: 0;
+    left: 0;
+    text-align: center;     
+    background-color: rgba(171,205,204,0.6);  
+    opacity: 0;    
+    transition: opacity 0.3s ease;     
+}
+
+section#portfolio div.album div.portfolio-item:hover::after
+{   
+    opacity: 1; 
+    background-color: rgba(171,205,204,0.9);
+    cursor: default;    
+}
+
+div.opis
+{
+    text-align: center;
+    width: 70%;
+    height: 60%;
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    opacity: 0;
+}
+
+section#portfolio div.album div.portfolio-item:hover div.opis
+{
+    opacity: 1;
+    z-index: 1;
+}
+
+
+@media all and (min-width: 992px)
+{  
+    section#portfolio div.album div.portfolio-item
+    {
+        display: inline-block;
+        width: 50%;
+    }
+}
+
+/*----------------------------styl sekcji jak aplikować-----------------------*/
+section#jak-aplikowac
+{
+    width: 100%;
+    height: min-content; 
+    background-image: linear-gradient(rgba(255,255,255,0),rgba(171,205,204,0.6));  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+    
+section#jak-aplikowac h2
+{
+    color: rgb(0,36,96);
+}
+
+section#jak-aplikowac div.krok
+{
+    padding: 3vh;
+    display: flex;
+    align-items: center; 
+    flex-direction: column;
+    font-size: 20px;
+}
+
+section#jak-aplikowac div.krok:nth-child(2)::after
+{
+    content: "Wyślij zgloszenie";
+    text-align: center;
+}
+
+section#jak-aplikowac div.krok:nth-child(3)::after
+{
+    content: "Rozwiąż test predyspozycji";
+    text-align: center;
+}
+
+section#jak-aplikowac div.krok:nth-child(4)::after
+{
+    content: "Podpisz umowę";
+    text-align: center;
+}
+
+section#jak-aplikowac div.krok:nth-child(5)::after
+{
+    content: "Witamy na pokladzie";
+    text-align: center;
+}
+ 
+section#jak-aplikowac div.krok img
+{
+    width: 100px;
+}
+
+@media all and (min-width: 992px)
+{
+    section#jak-aplikowac
+    {
+        flex-direction: row;  
+        flex-wrap: wrap;
+    }
+    
+    section#jak-aplikowac h2
+    {
+        flex-basis: 100%;        
+    }
+    
+    section#jak-aplikowac div.krok
+    {
+        flex-basis: 25%;
+    }
+}
+
+/*----------------------------styl formularza---------------------------------*/
+section#kontakt
+{
+    width: 100%;
+    height: min-content;
+    background-color: rgb(171,205,204);  
+    min-height: 620px;
+}
+
+section#kontakt h2
+{
+    color: rgb(0,36,96);
+}
+
+section#kontakt form
+{
+    width: 100%;  
+}
+
+section#kontakt form input, textarea
+{
+    display: block;
+    width: 96%;
+    font-size: 15px;
+    margin: 2vh 2vw 2vh 2vw;
+    padding: 2vh 2vw 2vh 2vw;
+    font-size: 30px;
+}
+
+section#kontakt form textarea
+{
+    resize: none;
+}
+
+section#kontakt div
+{
+    text-align: center;
+}
+
+section#kontakt button
+{   
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding: 5px; 
+    background-image: linear-gradient(rgb(171,205,204), rgb(112,173,71));  
+    border: none;
+    box-shadow: 4px 4px 6px;
+    color: rgb(41,72,127);
+    text-transform: uppercase; 
+    font-weight: bold;
+}
+
+section#kontakt button#wyslij
+{
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    background-color: red;    
+}
+
+section#kontakt div h4
+{
+    margin-top: 4vh;
+    color: rgb(0,32,96);
+}
+
+/*----------------------------styl footera------------------------------------*/
+footer
+{
+    background-image: linear-gradient(rgb(171,205,204),rgb(0,0,0));
+    text-align: center;
+    height: 10vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    color: #fff;    
+}
+
+footer img
+{
+    height: 8vh;
+    padding-right: 2vw;
+}
